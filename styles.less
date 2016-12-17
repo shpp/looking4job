@@ -1,0 +1,175 @@
+@page-width: 1300px;
+@button-width: 300px;
+@button-height: 70px;
+@button-offset: (-@button-width / 16 ) + 1;
+@button2: @button-width / 2;
+@button4: @button-width / 16;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.splitter {
+    z-index:10;
+    width: @button-width;
+    height: @button-height;
+    background: #ffea00;
+    position: relative;
+    margin: 10px auto;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    line-height: @button-height;
+}
+.splitter:before {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: @button-offset;
+    left: 0;
+    border-left: @button2 solid transparent;
+    border-right: @button2 solid transparent;
+    border-bottom: @button4 solid #ffea00;
+}
+.splitter:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: @button-offset;
+    left: 0;
+    border-left: @button2 solid transparent;
+    border-right: @button2 solid transparent;
+    border-top: @button4 solid #ffea00;
+}
+section{
+    width: @page-width;
+    margin:0 auto;
+}
+.welcome{
+    height:500px;
+    background: url(bg.png);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .splitter{
+        bottom: -@button-height / 4;
+    }
+    .logo{
+        margin:45px 0 0 55px;
+        background: #ffea00;
+        width:140px;
+        height:85px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        p{
+            text-align: center;
+            line-height: 35px;
+            font-size: 23px;
+            text-transform: uppercase;
+            span{
+                font-size: 38px;
+            }
+        }
+    }
+    .greet{
+        width: 60%;
+        margin:auto;
+        text-align: center;
+        1align-self: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        .greet-text{
+            font-size: 34px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        .greet-descr{
+            font-size: 16px;
+        }
+    }
+}
+.how{
+    position: relative;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    height: 470px;
+    .cols{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        .column{
+            width: 40%;
+            color: #333;
+            img{
+                float: left;
+                width:32px;
+                height:32px;
+                margin:5px;
+            }
+            p{
+                margin:40px 0;
+            }
+        }
+    }
+    .hint{
+        font-size: 13px;
+        color: #999;
+        font-weight: 100;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+}
+.triangle{
+    display: block;
+    width:0;
+    height:0;
+    position: absolute;
+    z-index: 5;
+} 
+.top-left,
+.top-right{
+    top:-145px;
+    border-bottom: 150px solid #fff;
+}
+.top-left{
+    left:0;
+    border-right: @page-width / 2 solid transparent;
+}
+.top-right{
+    right:0;
+    border-left: @page-width / 2 solid transparent;
+}
+.bottom-left,
+.bottom-right{
+    bottom: -145px;
+    border-top: 150px solid #fff;
+}
+.bottom-left{
+    left:0;
+    border-right: @page-width / 2 solid transparent;  
+}
+.bottom-right{
+    right:0;
+    border-left: @page-width / 2 solid transparent;
+}
+.faq{
+    height: 780px;
+    background: url(bg2.png);
+    background-size: cover;
+    width: 1300px;
+    position: relative;
+    .splitter{
+        top: -@button-height / 4;
+    }
+}
