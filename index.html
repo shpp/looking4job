@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet/less" type="text/css" href="styles.less" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<link rel="stylesheet/less" type="text/css" href="styles/main.less" />
 <script>
   less = {
     env: "development"
@@ -14,55 +15,96 @@
 </head>
 <body>
 	<section class="welcome">
-		<div class="logo">
-			<p>looking <span>4job</span></p>
-		</div>
-		<div class="greet">
-			<p class="greet-text">
-				Добро пожаловать в проект
-			</p>
-			<p class="greet-descr">Наша цель — упростить и ускорить диалог между работодателями сферы IT и потенциальными сотрудниками. Наш проект — не только для программистов, но и для менеджеров, дизайнеров, юристов: людей, которые хотят работать в сфере ІТ.
-			</p>
-		</div>
-		<div class="splitter">
-			Как это работает
+		<div class="container">
+			<div class="logo">
+				<p>looking <span>4job</span></p>
+			</div>
+			<div class="greet">
+				<p class="greet-text">
+					Добро пожаловать в проект
+				</p>
+				<p class="greet-descr">Наша цель — упростить и ускорить диалог между работодателями сферы IT и потенциальными сотрудниками. Наш проект — не только для программистов, но и для менеджеров, дизайнеров, юристов: людей, которые хотят работать в сфере ІТ.
+				</p>
+			</div>
 		</div>
 	</section>
 	<section class="how">
 		<div class="triangle top-left"></div>
 		<div class="triangle top-right"></div>
-		<div class="cols">
-			<div class="column c-left">
-				<p>
-					<img src="letter.png" alt="">
-					Вы отправляете* на почту <a href="mailto:lookingForJob@kowo.me">lookingForJob@kowo.me</a> свое CV, сопроводительное письмо, указываете желаемую позицию, желательно указать ссылку на Linkedin.
-				</p>
-				<p>
-					<img src="message.png" alt="">
-					После предварительного интервью вы попадаете в базу кандидатов с комментариями нашего специалиста. Потенциальные работодатели имеют доступ к этой базе.
-				</p>
+		<div class="splitter show">
+				Как это работает
 			</div>
-			<div class="column c-right">
-				<p>
-					<img src="peoples.png" alt="">				
-					Один из специалистов нашей команды связывается с вами и дает фидбек на ваше CV или приглашает на предварительное интервью.
-				</p>
-				<p>
-					<img src="confirm.png" alt="">
-					Если работодатель будет заинтересован в вашей кандидатуре, то он свяжется с вами и предложит формат дальнейшего общения.
-				</p>
+		<div class="container">
+			
+			
+			<div class="cols">
+				<div class="column c-left">
+					<p class="thumb letter">
+						Вы отправляете* на почту <a href="mailto:lookingForJob@kowo.me">lookingForJob@kowo.me</a> свое CV, сопроводительное письмо, указываете желаемую позицию, желательно указать ссылку на Linkedin.
+					</p>
+					<p class="thumb message">
+						После предварительного интервью вы попадаете в базу кандидатов с комментариями нашего специалиста. Потенциальные работодатели имеют доступ к этой базе.
+					</p>
+				</div>
+				<div class="column c-right">
+					<p class="thumb people">
+						Один из специалистов нашей команды связывается с вами и дает фидбек на ваше CV или приглашает на предварительное интервью.
+					</p>
+					<p class="thumb confirm">
+						Если работодатель будет заинтересован в вашей кандидатуре, то он свяжется с вами и предложит формат дальнейшего общения.
+					</p>
+				</div>
 			</div>
+			<p class="hint">
+				*Отправляя анкету вы даете разрешение на сбор, хранение и использование ваших персональных данных командой проекта и представителям компаний-партнеров.
+			</p>
+			
 		</div>
-		<p class="hint">
-			*Отправляя анкету вы даете разрешение на сбор, хранение и использование ваших персональных данных командой проекта и представителям компаний-партнеров.
-		</p>
 		<div class="triangle bottom-left"></div>
 		<div class="triangle bottom-right"></div>
-	</section>
-	<section class="faq">
-		<div class="splitter">
-			Как это работает
+		<div class="splitter sfaq">
+			FAQ
 		</div>
 	</section>
+	<section class="faq">
+		<div class="container">
+			<div class="faq-block">
+				<div class="faq-quest">У кого есть доступ к базе данных кандидатов?</div>
+				<div class="faq-descr">Доступ к базе данных имеют представители компаний-партнеров. Со списком партнеров вы можете ознакомится <a href="#">здесь</a></div>
+			</div>
+			<hr>
+			<div class="faq-block">
+				<div class="faq-quest">Как скоро я получу предложение о работе?</div>
+				<div class="faq-descr">Предварительное собеседование, в зависимости от загруженности нашей команді, планируется проводить в течении двух недель после получения вашего CV. Но это не является гарантией предложения о работе. Когда у компании-партнера появится новая вакансия, наша база будет одним из первых мест, куда заглянет HR в поиске кандидата. Но вы должны понимать, что подходящей ваканмии может и не быть в ближайшее время.</div>
+			</div>
+			<hr>
+			<div class="faq-block">
+				<div class="faq-quest">Могу ли я удалить себя из базы данных или изменить информацию?</div>
+				<div class="faq-descr">Да, конечно. Напишите нам на почту, мы изменим или удалим ваши данные по вашему требованию.</div>
+			</div>
+		</div>
+	</section>
+	<section class="partners">
+		<div class="container">
+			<div class="splitter spartners">
+				Наши партнеры
+			</div>
+			<div class="triangle top-left"></div>
+			<div class="triangle top-right"></div>
+			<div class="company">
+				<div class="comp"><a href="#"><img src="images/kowo.png" alt=""></a></div>
+				<div class="comp"><a href="#"><img src="images/onix.png" alt=""></a></div>
+				<div class="comp"><a href="#"><img src="images/200x300.png" alt=""></a></div>
+				<div class="comp"><a href="#"><img src="images/banda.png" alt=""></a></div>
+				<div class="comp"><a href="#"><img src="images/kineckt.png" alt=""></a></div>
+				<div class="comp"><a href="#"><img src="images/shpp.png" alt=""></a></div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<p><span>Поделитесь с друзьями</span> <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></p>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
