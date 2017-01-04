@@ -67,9 +67,9 @@ footer{
 }
 .welcome{
     width:100%;
-    height:500px;
     background: url(../images/bg.png) no-repeat;
     background-size: cover;
+    padding-bottom: 100px;
     .container{
         display: flex;
         flex-direction: column;    
@@ -115,12 +115,11 @@ footer{
     background: #fff;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    height: 470px;
     .show{
         top: -(@button-height);
     }
     .sfaq{
-        bottom: -(@button-height+10);
+        bottom: -(@button-height - 15);
     }
     .container{
         display: flex;
@@ -207,7 +206,6 @@ footer{
     border-left: @page-width / 1.8 solid transparent;
 }
 .faq{
-    height: 780px;
     background: url(../images/bg2.png);
     background-size: cover;
     position: relative;
@@ -239,13 +237,12 @@ footer{
 }
 .partners{
     position: relative;
-    height: 400px;
     .spartners{
-        top: -(@button-height+13);
+        top: -(@button-height+15);
     }
     .container{
         .company{
-            width:1000px;
+            width:80%;
             margin: 0 auto;
             margin-top: -50px;
             display: flex;
@@ -256,6 +253,9 @@ footer{
                 margin: 25px 0;
                 flex: 0 1 30%;
                 text-align: center;
+                img{
+                    max-width: 100%;
+                }
             }
         }
     }
@@ -286,47 +286,102 @@ footer{
         }
     }
 }
-
-@media only screen and (max-width : @page-width ) and (min-width: @desktop){
-    .triangle{
-        .top-left,
-        .top-right{
-            top:-85px;
-            border-bottom: 85px solid #fff;
-        }
-    }
-    .container{
-        width:100%;
-    }
-    section,
-    footer{
-        max-width: @page-width;
-        min-width: @desktop;
-    }
+@media screen and (min-width: @page-width){
     .how{
         .show{
-            top: -70px;
+            top: -45px;
         }
         .sfaq{
-            bottom: -30px;
+            top: 45px;
         }
     }
+    .partners .container .spartners{
+        top: -45px;
+    }
 }
-@media only screen and (max-width : @desktop ) and (min-width: @tablet){
+@media only screen and (max-width : @page-width ){
     .container{
-           max-width: 100%;
-        }
-        section,
-        footer{
-            
-        }
+        width: 100%;
+    }
+    .partners .container .company{
+        width: 100%;
+        ajustify-content:space-between;
+        padding: 0;
+    }
+    .how .container .cols {
+        align-items: flex-start;
+    }
+    .how .container .cols .column p.thumb{
+        background-position: 0 10%;
+    }
 }
-@media only screen and (max-width : @tablet ) and (min-width: @phone){
-    .how{
-        .container{
-            .cols{
-                flex-direction: column;
-            }
+@media only screen and (max-width : @desktop){
+    .splitter{
+        width: 150xp;
+        height:40px;
+        line-height: 40px;
+    }
+    .show,
+    .sfaq{
+        bottom: -10px;
+    }
+    .spartners{
+        top: -10px;
+    }
+    .how .container .cols {
+        padding:0 10px;
+        .column{
+            margin: 0 5px;
         }
+    }
+    .how .container .cols .column{
+        width:50%;
+        &.c-left,
+        &.c-right{
+            margin:0;
+        }
+    }
+    .partners .container .company{
+        width: 100%;
+    }
+}
+@media only screen and (max-width : @tablet){
+    .welcome .container .logo{
+        margin: 20px auto;
+    }
+    .triangle{
+        display: none;
+    }
+    .splitter{
+        &.show,
+        &.sfaq{
+            bottom: -30px;
+        }
+        &.spartners{
+            top: -30px;
+        }
+    }
+    .partners .container .company{
+        padding: 40px 0;
+    }
+    .faq .container{
+        padding:80px 0;
+    }
+    .how .container .cols {
+        flex-direction: column;
+        .column{
+            width: 100%;
+        }
+    }
+    .welcome .container{
+        apadding-bottom:50px;
+    }
+    .partners .container .company .comp{
+        flex: 0 1 50%;
+    }
+}
+@media only screen and (max-width : @phone){
+    .partners .container .company .comp{
+        flex: 0 1 100%;
     }
 }
