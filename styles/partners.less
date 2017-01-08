@@ -1,8 +1,15 @@
 #partners {
 	.divider {
-		width: 300px;
-		margin: 0 auto;
-		margin-top: -45px;
+		// width: 300px;
+		// margin: 0 auto;
+		// margin-top: -45px;
+		position: relative;
+		.splitter{
+			top: -35px;
+			@media screen and (max-width: 1024px) {
+				top:-20px;
+			}
+		}
 	}
 	.container {
 		width: 1024px;
