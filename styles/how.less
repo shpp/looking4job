@@ -1,0 +1,66 @@
+#how{
+    position: relative;
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    padding-bottom: 35px;
+    padding-top: 10px;
+    .splitter {
+        top: -70px;
+
+        @media screen and (max-width: 1300px) {
+            top: -90px;
+        }
+    }
+    .container {        
+        .cols {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            margin-top: 10px;
+
+            .column{
+                color: #333;
+                p {
+                    &.thumb {
+                        padding-left: 65px;
+                        background-repeat: no-repeat;
+                        background-position: 0 50%;
+                        margin-bottom: 65px;
+                        min-height: 45px;
+                        &.letter {
+                            background-image: url('../images/letter.png');
+                        }
+                        &.message {
+                            background-image: url('../images/message.png');
+                        }
+                        &.people {
+                            background-image: url('../images/peoples.png');
+                        }
+                        &.confirm {
+                            background-image: url('../images/confirm.png');
+                        }
+                    } 
+
+                }
+
+                @media screen and (max-width: 1050px) and (min-width: 850px) {
+                    &:first-child p.thumb  {
+                        padding-right: 65px; 
+                    }
+                }
+            }
+            @media screen and (max-width: 850px) {
+                display: block;
+                .column p.thumb  {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+        .hint{
+            font-size: 12px;
+            color: #999;
+            text-align: center;
+        }
+    }
+}

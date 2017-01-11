@@ -1,27 +1,22 @@
 #partners {
-	.divider {
-		// width: 300px;
-		// margin: 0 auto;
-		// margin-top: -45px;
-		position: relative;
-		.splitter{
-			top: -35px;
-			@media screen and (max-width: 1024px) {
-				top:-20px;
-			}
-		}
-	}
-	.container {
-		width: 1024px;
-		@media screen and (max-width: 1050px) {
-			width: 90%;
-		}
+	position: relative;	
+	top: -100px;
+	.splitter {	
+        top: -45px;
+
+        @media screen and (max-width: 1300px) {
+            top: -55px;
+        }
+
+        @media screen and (max-width: 800px) {
+            top: -100px;
+        }
 	}
 	.companies {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		padding: 60px 0;
+		padding: 20px 0 0;
 		.comp {
 			flex-basis: 33%;
 			text-align: center;

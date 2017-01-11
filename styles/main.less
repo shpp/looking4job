@@ -1,23 +1,36 @@
-@page-width: 1300px;
+@container-width: 1024px;
 @button-width: 300px;
 @button-height: 70px;
 @button-offset: (-@button-width / 12 ) + 1;
 @button2: @button-width / 2;
 @button4: @button-width / 12;
 
-@tablet: 768px;
-@desktop: 1024px;
-@phone: 468px;
+// @tablet: 768px;
+// @desktop: 1024px;
+// @phone: 468px;
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 
-*{
+body {
+    font-size: 16px;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-a{
+
+a {
     color: #333;
+}
+
+.container {
+    width: @container-width;
+    margin: 0 auto;
+    @media screen and (max-width: 1050px) {
+        width: 90%;
+    }
 }
 
 .splitter {
@@ -33,390 +46,49 @@ a{
     font-weight: 300;
     text-align: center;
     line-height: @button-height;
-}
-.splitter:before {
-    content: "";
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: @button-offset;
-    left: 0;
-    border-left: @button2 solid transparent;
-    border-right: @button2 solid transparent;
-    border-bottom: @button4 solid #ffea00;
-}
-.splitter:after {
-    content: "";
-    width: 0;
-    height: 0;
-    position: absolute;
-    bottom: @button-offset;
-    left: 0;
-    border-left: @button2 solid transparent;
-    border-right: @button2 solid transparent;
-    border-top: @button4 solid #ffea00;
+    &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: @button-offset;
+        left: 0;
+        border-left: @button2 solid transparent;
+        border-right: @button2 solid transparent;
+        border-bottom: @button4 solid #ffea00;
+    }
+    &:after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: @button-offset;
+        left: 0;
+        border-left: @button2 solid transparent;
+        border-right: @button2 solid transparent;
+        border-top: @button4 solid #ffea00;
+    }
 }
 
-section,
-footer{
-    width: 100%;
-}
-.container{
-    width: @page-width;
-    margin:0 auto;
-}
-.welcome{
-    width:100%;
-    background: url(../images/bg.png) no-repeat;
-    background-size: cover;
-    padding-bottom: 100px;
-    .container{
-        display: flex;
-        flex-direction: column;    
-        .logo{
-            margin:45px 0 0 55px;
-            background: #ffea00;
-            width:140px;
-            height:85px;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 700;
-            padding-top:5px;
-            p{
-                text-align: center;
-                line-height: 33px;
-                font-size: 23px;
-                text-transform: uppercase;
-                span{
-
-                    font-size: 38px;
-                }
-            }
-        }
-        .greet{
-            width: 60%;
-            margin:60px auto;
-            text-align: center;
-            1align-self: center;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 400;
-            .greet-text{
-                font-size: 34px;
-                font-weight: 500;
-                margin-bottom: 25px;
-            }
-            .greet-descr{
-                font-size: 16px;
-            }
-        }
-    }
-}
-.how{
-    position: relative;
-    background: #fff;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    .show{
-        top: -(@button-height);
-    }
-    .sfaq{
-        bottom: -(@button-height - 15);
-    }
-    .container{
-        display: flex;
-        flex-direction: column;
-        
-        .cols{
-            display: flex;
-            //justify-content: space-between;
-            align-items: center;
-            height: 100%;
-            margin-top: 15px;
-
-            .column{
-                width: 40%;
-                color: #333;
-                &.c-left{
-                    margin-left: 90px;
-                }
-                &.c-right{
-                    margin-left: 65px;
-                }
-                p{
-                    &.thumb{
-                        padding-left: 65px;
-                        background-repeat: no-repeat;
-                        background-position: 0 50%;
-                        margin-bottom: 65px;
-                    } 
-                    &.letter{
-                        background-image: url('../images/letter.png');
-                    }
-                    &.message{
-                        background-image: url('../images/message.png');
-                    }
-                    &.people{
-                        background-image: url('../images/peoples.png');
-                    }
-                    &.confirm{
-                        background-image: url('../images/confirm.png');
-                    }
-                }
-            }
-        }
-        .hint{
-            font-size: 13px;
-            color: #999;
-            font-weight: 100;
-            text-align: center;
-            margin-top: 5px;
-        }
-    }
-}
-.triangle{
-    display: block;
-    width:0;
-    height:0;
-    position: absolute;
-    z-index: 5;
-} 
-.top-left,
-.top-right{
-    top:-135px;
-    border-bottom: 135px solid #fff;
-}
-.top-left{
-    left:0;
-    border-right: @page-width / 2.2 solid transparent;
-}
-.top-right{
-    right:0;
-    border-left: @page-width / 2.2 solid transparent;
-}
-.bottom-left,
-.bottom-right{
-    bottom: -85px;
-    border-top: 85px solid #fff;
-}
-.bottom-left{
-    left:0;
-    border-right: @page-width / 2.2 solid transparent;  
-}
-.bottom-right{
-    right:0;
-    border-left: @page-width / 2.2 solid transparent;
-}
-.faq{
-    background: url(../images/bg2.png);
-    background-size: cover;
-    position: relative;
-    .container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        padding: 140px 0;
-        .faq-block{
-            text-align: center;
-            width: 75%;
-            font-size: 22px;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 300;
-            margin-bottom: 5px;
-            .faq-quest{
-                font-weight: 500;
-                margin-bottom: 5px;
-            }
-        }
-        .line{
-            width:200px;
-            background: #ffea00;
-            border: none;
-            height: 2px;
-            margin: 35px 0;
-        }
-    }
-}
-.partners{
-    position: relative;
-    .spartners{
-        top: -(@button-height+15);
-    }
-    .container{
-        // .company{
-        //     width:80%;
-        //     margin: 0 auto;
-        //     margin-top: -50px;
-        //     display: flex;
-        //     flex-wrap: wrap;
-        //     align-items: center;
-        //     justify-content: space-around;
-        //     .comp{
-        //         margin: 25px 0;
-        //         flex: 0 1 30%;
-        //         text-align: center;
-        //         img{
-        //             max-width: 100%;
-        //         }
-        //     }
-        // }
-    }
-}
-footer{
+footer {
     background: #ffea00;
-    height: 75px;
     text-align: center;
-    font-size: 18px;
     font-family: 'Roboto', sans-serif;
-    p{
-        display: table;
-        width: 400px;
-        margin: 20px auto;
-        line-height: 75px;
-    }
-    a,
-    span{
-        display: table-cell;
-        vertical-align: middle;
-        aborder: 1px solid red;
-        padding:0;
-    }
-    a{
-        font-size: 36px;
-        &:hover{
-            color: #888;
-        }
-    }
-}
-@media screen and (min-width: @page-width){
-    .how{
-        .show{
-            top: -35px;
-        }
-        .sfaq{
-            top: 45px;
-        }
-    }
-    .partners .container .spartners{
-        top: -45px;
-    }
-}
-@media only screen and (max-width : @page-width ){
-    .container{
-        width: 100%;
-    }
-    // .partners .container .company{
-    //     width: 100%;
-    //     ajustify-content:space-between;
-    //     padding: 0;
-    // }
-    .how .container .cols {
-        align-items: flex-start;
-    }
-    .how .container .cols .column p.thumb{
-        background-position: 0 10%;
-    }
-}
-@media only screen and (max-width : @desktop){
-    .splitter{
-        height:40px;
-        line-height: 40px;
-    }
-    .show,
-    .sfaq{
-        bottom: -10px;
-    }
-    .spartners{
-        top: -10px;
-    }
-    .how{
-        padding-left: 10px;
-    }
-    .how .container .cols {
-        padding:0 10px;
-        .column{
-            margin: 0 5px;
-        }
-    }
-    .how .container .cols .column{
-        width:50%;
-        &.c-left,
-        &.c-right{
-            margin:0;
-        }
-    }
-    // .partners .container .company{
-    //     width: 100%;
-    // }
-}
-@media only screen and (max-width : @tablet){
-    .welcome .container {
-        .logo{
-            margin: 20px auto;
-        }
-        .greet{
-            width:80%;
-        }
-    }
-    .triangle{
-        display: none;
-    }
-    .splitter{
-        &.show,
-        &.sfaq{
-            bottom: -30px;
-        }
-        &.spartners{
-            top: -30px;
-        }
-    }
-    // .partners .container .company{
-    //     padding: 40px 0;
-    // }
-    
-    .faq .container{
-        padding:80px 0;
-    }
-    .how .container .cols {
-        flex-direction: column;
-        .column{
-            width: 100%;
-            p.thumb{
-                margin-bottom: 20px;
+    padding: 25px 0 20px;
+    h5 {
+        font-size: 1.15rem; 
+        font-weight: 300;
+        a {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 1rem;
+            i.fa {
+                font-size: 3rem;
+            }
+            &:hover {
+                color: #888;
             }
         }
-    }
-    .welcome .container{
-        apadding-bottom:50px;
-    }
-    // .partners .container .company .comp{
-    //     flex: 0 1 50%;
-    // }
-}
-// @media only screen and (max-width : @phone){
-//     .partners .container .company .comp{
-//         flex: 0 1 100%;
-//     }
-// }
-@media only screen and (max-width: @phone){
-    .faq{
-        .container{
-            .faq-block{
-                width:90%;
-                font-size: 18px;
-            }
-        }
-    }
-    .how .container{
-        margin-top: -40px;
-    }
-    footer{
-        p{
-            width:95%;
-            margin:0 auto;
-            font-size: 16px;
-        }
-        a{
-            font-size: 28px;
-        }
+
     }
 }
