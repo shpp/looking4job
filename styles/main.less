@@ -78,6 +78,14 @@ footer {
     h5 {
         font-size: 1.15rem; 
         font-weight: 300;
+        span{
+            //white-space: nowrap;
+            @media screen and (max-width: 500px) {
+                width: 100%;
+                display: block;
+                margin-top: 5px;
+            }
+        }
         a {
             display: inline-block;
             vertical-align: middle;

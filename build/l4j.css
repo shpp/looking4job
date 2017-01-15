@@ -248,6 +248,9 @@ footer h5 a:hover {
 #partners .companies .comp {
   flex-basis: 33%;
   text-align: center;
+  img{
+    max-width: 145px;
+  }
 }
 #partners .companies .comp a {
   display: block;
