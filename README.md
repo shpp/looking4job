@@ -1,7 +1,7 @@
 ### For development
 
-`npm start`
-`gulp serve`
+1. `npm install`
+2. `gulp serve`
 
 
 ### For creating prod build
