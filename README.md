@@ -1,8 +1,9 @@
 ### For development
 
-1. `npm start`
-2. `gulp serve`
+`npm start`
+`gulp serve`
+
 
 ### For creating prod build
 
-1. `gulp build`
+`gulp build`
