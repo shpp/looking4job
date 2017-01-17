@@ -43,4 +43,4 @@ gulp.task('serve', 'Development build. Watch less files for changes.', ['browser
 	gulp.watch(config.styles + '*.less', ['less', browserSync.reload]);
 }); 
 
-gulp.task('build', 'Production build', ['less', 'minify-css']);
+gulp.task('build', 'Production build', ['less', 'minify-css', 'inject-min-css']);
