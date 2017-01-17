@@ -15,15 +15,15 @@
   "bugs": {
     "url": "https://github.com/shpp/looking4job/issues"
   },
-  "homepage": "https://github.com/shpp/looking4job#readme",
+  "homepage": "https://github.com/shpp/looking4job",
   "devDependencies": {
     "browser-sync": "^2.18.6",
-    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.2",
+    "gulp-help": "^1.6.1",
     "gulp-inject": "^4.2.0",
     "gulp-less": "^3.3.0",
-    "gulp-rename": "^1.2.2"
+    "gulp-load-plugins": "^1.0.0"
   }
 }
