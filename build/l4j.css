@@ -296,7 +296,7 @@ footer h5 a:hover {
   display: block;
 }
 #partners .companies .comp a img {
-  max-width: 70%;
+  max-height: 80px;
 }
 #partners .companies .comp:nth-child(1),
 #partners .companies .comp:nth-child(2),
